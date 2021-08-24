@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8">
     <title>Hello World!</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/cesiumjs/1.78/Build/Cesium/Cesium.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <!-- CSS only -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
 <!-- JavaScript Bundle with Popper -->
@@ -15,21 +15,14 @@
   
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">Navbar</a>
+        <a class="navbar-brand" href="#">oembed 과제</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+              <a class="nav-link active" aria-current="page" href="/">메인페이지</a>
             </li>
           </ul>
         </div>
@@ -39,64 +32,21 @@
     <hr/>
     <div class="container">
         <!-- url 입력창 -->
-        <form class="d-flex">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
+        <form id="search_form" class="d-flex">
+            <input id="search_input" class="form-control me-2" type="search" placeholder="Search" name="url">
+            <button id="search_bottom" class="btn btn-outline-success" type="submit">Search</button>
           </form>
 
           <!-- 테이블 -->
-          <table class="table table-striped">
-            <thead>
-              <tr>
-                <th scope="col">#</th>
-                <th scope="col">First</th>
-                <th scope="col">Last</th>
-                <th scope="col">Handle</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td colspan="2">Larry the Bird</td>
-                <td>@twitter</td>
-              </tr>
-            </tbody>
-          </table>
       </div>
-
-
-    <!-- <div class="position-relative">
-
-        <div class="position-absolute top-50 start-50 translate-middle">
-            <div class="input-group mb-3">
-                <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2">
-                <button class="btn btn-outline-secondary" type="button" id="button-addon2">Button</button>
-              </div>
-
-        </div>
-       
-      </div> -->
-      <button type="button" class="btn btn-primary">Primary</button>
-
-      <h1>Hello
-          <% if(name){ %>
-            <span class="name"><%= name %>!</span>
-          <% } else { %>
-            <span class="stranger">Stranger!</span>
-          <% } %>
-        </h1>
+      <script type="text/javascript">
+        $( "#search_form" ).submit((e) => {
+          const value = $( "#search_input" ).val()
+          console.log(value)
+          location.href=`./search?url=${value}`
+          e.preventDefault();
+        });
+      </script>
 
         
   </body>
