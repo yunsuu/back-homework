@@ -1,7 +1,6 @@
 {
   "name": "my-app",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,5 +10,14 @@
   "dependencies": {
     "express": "^4.17.1",
     "oembed-parser": "^1.4.7"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yunsuu/back-homework.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yunsuu/back-homework/issues"
+  },
+  "homepage": "https://github.com/yunsuu/back-homework#readme",
+  "description": ""
 }
