@@ -1,0 +1,126 @@
+<!-- views/hello.ejs -->
+
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Hello World!</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/cesiumjs/1.78/Build/Cesium/Cesium.js"></script>
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>  
+</head>
+  <body>
+  
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <hr/>
+    <div class="container">
+        <!-- url 입력창 -->
+        <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+
+          <!-- 테이블 -->
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">title</th>
+                <th scope="col"><%= obj.title %></th>
+
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th >author_name</th>
+                <td><%= obj.author_name %></td>
+            </tr>
+            <tr>
+                <th >author_url</th>
+                <td><%= obj.author_url %></td>
+            </tr>
+            <tr>
+                <th >type</th>
+                <td><%= obj.type %></td>
+            </tr>
+            <tr>
+                <th >height</th>
+                <td><%= obj.height %></td>
+            </tr>
+            <tr>
+                <th >width</th>
+                <td><%= obj.width %></td>
+            </tr>
+            <tr>
+                <th >version</th>
+                <td><%= obj.version %></td>
+            </tr>
+            <tr>
+                <th >provider_name</th>
+                <td><%= obj.provider_name %></td>
+            </tr>
+            <tr>
+                <th >provider_url</th>
+                <td><%= obj.provider_url %></td>
+            </tr>
+            <tr>
+                <th >thumbnail_height</th>
+                <td><%= obj.thumbnail_height %></td>
+            </tr>
+            <tr>
+                <th >thumbnail_width</th>
+                <td><%= obj.thumbnail_width %></td>
+            </tr>
+            <tr>
+                <th >thumbnail_url</th>
+                <td><img src="<%= obj.thumbnail_url %>"></td>
+            </tr>
+            <tr>
+                <th >html</th>
+                <td><%- obj.html %></td>
+            </tr>
+
+            </tbody>
+          </table>
+      </div>
+
+
+    <!-- <div class="position-relative">
+
+        <div class="position-absolute top-50 start-50 translate-middle">
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2">
+                <button class="btn btn-outline-secondary" type="button" id="button-addon2">Button</button>
+              </div>
+
+        </div>
+       
+      </div> -->
+
+        
+  </body>
+
+</html>
