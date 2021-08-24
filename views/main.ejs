@@ -39,6 +39,26 @@
 
           <!-- 테이블 -->
       </div>
+      <hr/>
+      <h1 id="1-">1. 사용한 기술</h1>
+        <ul>
+          <li>Node.js</li>
+          <li>ejs</li>
+        </ul>
+      <h1 id="2-">2. 과제 특징</h1>
+        <ul>
+          <li>Node.js를 이용해 url의 oembed를 추출합니다.</li>
+          <li>ejs 뷰 엔진을 이용해 추출한 데이터를 손쉽게 html로 보여줄 수 있도록 하였습니다.</li>
+          <li><p><strong>최근에 일어난 facebook 개인정보 유출 사건으로 인해 facebook과 instagram은 open oembed 서비스를 종료하였습니다. 그 때문에 facebook과 instagram의 oembed 를 얻으려면 앱 검수를 받아야 합니다. 찾아보니 앱 검수는 길면 한달정도 걸릴 수 있다고 합니다. 저 역시 아직 승인을 받지 못해 facebook과 instagram에 대한 링크는 구현을 하지 못한 점 참고해주시면 감사하겠습니다.</strong></p>
+            <p>  관련링크 : <a href="https://developers.facebook.com/docs/plugins/oembed/">https://developers.facebook.com/docs/plugins/oembed</a></p>
+          </li>
+        </ul>
+      <h1 id="3-">3. 이용방법</h1>
+      <ul>
+        <li>화면 중앙에 있는 입력 input칸에 url을 입력 후 버튼을 눌러주세요.</li>
+        <li>누른 후 search 페이지에서 table 형식으로 oembed의 추출값을 보여줍니다.</li>
+      </ul>
+      
       <script type="text/javascript">
         $( "#search_form" ).submit((e) => {
           const value = $( "#search_input" ).val()
