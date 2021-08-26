@@ -108,10 +108,10 @@
 
       <script type="text/javascript">
         $( "#search_form" ).submit((e) => {
+          e.preventDefault();
           const value = $( "#search_input" ).val()
           console.log(value)
           location.href=`./search?url=${value}`
-          e.preventDefault();
         });
       </script>
 

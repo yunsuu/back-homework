@@ -4,24 +4,22 @@ const port = 3000;
 
 const oembed = require('oembed-parser');
 
-app.set('view engine', 'ejs'); // 1
+app.set('view engine', 'ejs');
 app.use(express.static(__dirname + '/public'));
 
 app.get('/', function (req, res) {
-  res.render('main', { name: '앙' });
+  res.render('main');
 });
 
 app.get('/search', function (req, res) {
   const url = req.query.url;
-  console.log(url);
   oembed
     .extract(url)
     .then((oembed) => {
-      console.log(oembed);
       res.render('search', { obj: oembed });
     })
     .catch((err) => {
-      console.trace(err);
+      console.log(err);
     });
 });
 
